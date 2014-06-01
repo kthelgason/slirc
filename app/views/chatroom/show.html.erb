@@ -12,7 +12,17 @@
       <% end %>
       
     </tbody>
-    <%= form_for :message, url: {action: :send_message }  do |f| %>
-      <%= f.text_field :text %>
-    <% end %>
 </table>
+<%= form_for :message, url: {action: :send_message }, html: {class: "form-inline", role: "form" } do |f| %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="input-group">
+      <%= f.text_field :text, class: "form-control", placeholder: "message" %>
+      <span class="input-group-btn">
+        <%= f.submit "send", class: "btn btn-default"  %>
+        <%# <button type="button" class="btn btn-default">Send</button>%>
+      </span>
+    </div>
+  </div>
+</div>
+<% end %>
