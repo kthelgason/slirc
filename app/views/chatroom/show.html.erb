@@ -1,3 +1,14 @@
-<h1>Hello?</h1>
-<p> <%= @room.uniqueURL %> </p>
-<p> <%= @room.user.username %> </p>
+<div class="page-header">
+  <h1><%= @room.user.username + "'s " %>Chatroom <small>invite your friends for an instant place to chat</small></h1>
+  <p> Link: <%= @room.uniqueURL %> </p>
+</div>
+<table class="table">
+    <tbody>
+      <% @room.messages.each do |m| %>
+        <tr>
+          <td><%= m.user.username %></td>
+          <td><%= m.text %></td>
+        </tr>  
+      <% end %>
+    </tbody>
+</table>
