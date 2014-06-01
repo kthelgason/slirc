@@ -4,5 +4,5 @@
 <div class="jumbotron">
   <h1> Sorta Like IRC</h1>
   <p> Click on the button below to instantly create a new chatroom and invite your friends.</p>
-  <button class="btn btn-primary">Create</button>
+  <%= button_to "Create", chatroom_index_path, class: "btn btn-primary", method: "POST" %>
 </div>
