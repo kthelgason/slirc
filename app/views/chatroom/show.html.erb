@@ -10,5 +10,9 @@
           <td><%= m.text %></td>
         </tr>  
       <% end %>
+      
     </tbody>
+    <%= form_for :message, url: {action: :send_message }  do |f| %>
+      <%= f.text_field :text %>
+    <% end %>
 </table>
