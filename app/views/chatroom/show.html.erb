@@ -4,7 +4,7 @@
 </div>
 <table class="table">
     <tbody>
-      <% @room.messages.each do |m| %>
+      <% @messages.each do |m| %>
         <tr>
           <td><%= m.user.username %></td>
           <td><%= m.text %></td>
