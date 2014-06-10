@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :chatroom do
     member do
       post 'send_message'
+      get :events
     end
   end
 
